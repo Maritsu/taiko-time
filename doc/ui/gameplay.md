@@ -19,6 +19,6 @@ and contains the following elements:
 + drum icon and receptor icon
 + combo counter (counter object)
 
-# Score/clear bar
+## Score/clear bar
 + horizontally moving bar with collision block at the end to detect if song is cleared
 + collision block in the "clear" section
