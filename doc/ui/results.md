@@ -5,7 +5,7 @@ flowchart TD
     RS(Results screen: good/bad/miss, accuracy, combo, grade)
     RS -->|Song failed| GP0[Death]
     RS -->|Song cleared| GP1(Give coins)
-    GP1 --> 9999[Level end]
+    GP1 --> 9998[End screen] --> 9999[Level ends]
 ```
 
 ## Overall UI

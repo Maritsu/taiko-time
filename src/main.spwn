@@ -1,0 +1,6 @@
+setup = import "setup.spwn"
+SL = import "songlink.spwn"
+SI = import "songinfo.spwn"
+GP = import "gameplay.spwn"
+RS = import "results.spwn"
+ED = import "endscreen.spwn"
