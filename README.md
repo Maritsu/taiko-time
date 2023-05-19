@@ -4,9 +4,9 @@
 _(literally an idea i had when i was falling asleep in class)_
 
 ## Checklist
-- [ ] Documentation
+- [X] Documentation
 - - [X] UI/UX docs
-- - [ ] Technical docs
+- - [X] Technical docs
 - [ ] Song link page
 - [ ] Song information transition
 - [ ] Gameplay
