@@ -1,0 +1,39 @@
+SE = import "setup.spwn"
+
+let M = {}
+
+M.constructChart = (sx:@number, sy:@number) {
+	extract obj_props
+
+	let sx = sx*30
+	let sy = sy*30
+
+	start = obj {
+		OBJ_ID: 1603,
+		X: sx,
+		Y: sy-10,
+		ROTATION: 270,
+	}
+	$.add(start)
+
+	file = $.readfile("chart.txt").replace("\r","").split("\n").filter(line => line.trim().length > 0)
+
+	for line in file {
+		data = line.trim().split(" ")
+		[xo, dk] = data if data.length == 2 else [-30, SE.kaid]
+
+		let object = obj {
+			OBJ_ID: 1816,
+			X: sx + 30*@number(xo),
+			Y: sy,
+			SCALING: 1,
+			BLOCK_A: SE.donid if dk == "don" else SE.kaid,
+			DYNAMIC_BLOCK: true,
+			GROUPS: SE.chartgroup,
+		}
+
+		$.add(object)
+	}
+}
+
+return M

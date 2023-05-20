@@ -1,0 +1,9 @@
+let M = {}
+
+M.songtitle = ""
+M.songauthor = ""
+M.donid = ?b
+M.kaid = ?b
+M.chartgroup = ?g
+
+return M

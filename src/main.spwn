@@ -1,6 +1,11 @@
-setup = import "setup.spwn"
+SE = import "setup.spwn"
 SL = import "songlink.spwn"
 SI = import "songinfo.spwn"
+CH = import "chart.spwn"
 GP = import "gameplay.spwn"
 RS = import "results.spwn"
 ED = import "endscreen.spwn"
+
+GS = import gamescene
+
+-> CH.constructChart(10, 2)
