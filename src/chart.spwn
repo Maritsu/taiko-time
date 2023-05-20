@@ -1,6 +1,8 @@
-SE = import "setup.spwn"
-
 let M = {}
+
+_donid = ?b
+_kaid = ?b
+_group = ?g
 
 M.constructChart = (sx:@number, sy:@number) {
 	extract obj_props
@@ -20,16 +22,16 @@ M.constructChart = (sx:@number, sy:@number) {
 
 	for line in file {
 		data = line.trim().split(" ")
-		[xo, dk] = data if data.length == 2 else [-30, SE.kaid]
+		[xo, dk] = data if data.length == 2 else [-30, _kaid]
 
 		let object = obj {
 			OBJ_ID: 1816,
 			X: sx + 30*@number(xo),
 			Y: sy,
 			SCALING: 1,
-			BLOCK_A: SE.donid if dk == "don" else SE.kaid,
+			BLOCK_A: _donid if dk == "don" else _kaid,
 			DYNAMIC_BLOCK: true,
-			GROUPS: SE.chartgroup,
+			GROUPS: _chartgroup,
 		}
 
 		$.add(object)
