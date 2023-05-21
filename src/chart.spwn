@@ -31,7 +31,7 @@ M.constructChart = (sx:@number, sy:@number) {
 			SCALING: 1,
 			BLOCK_A: _donid if dk == "don" else _kaid,
 			DYNAMIC_BLOCK: true,
-			GROUPS: _chartgroup,
+			GROUPS: _group,
 		}
 
 		$.add(object)

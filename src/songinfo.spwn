@@ -1,5 +1,3 @@
-SE = import "setup.spwn"
-
 let M = {}
 
 M.group = 2001g

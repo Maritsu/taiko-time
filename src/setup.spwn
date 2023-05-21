@@ -1,7 +1,24 @@
-let M = {}
+let M = {
+	groups: {},
+	offsets: {},
+}
 
-// limbo moment
-M.songtitle = "Isolation"
-M.songauthor = "NightHawk77"
+M.groups.alpha = 1g
+M.groups.semialpha = 2g
+M.groups.overlay = 3g
+
+M.groups.SL = ?g
+M.groups.SI = ?g
+M.groups.GP = ?g
+M.groups.RS = ?g
+M.groups.ES = ?g
+M.groups.ED = ?g
+
+M.offsets.SL = 5
+M.offsets.SI = 795
+M.offsets.GP = 1185
+M.offsets.RS = 1455
+M.offsets.ES = 17985
+M.offsets.ED = 19485
 
 return M
