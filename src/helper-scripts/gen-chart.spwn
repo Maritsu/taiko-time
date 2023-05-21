@@ -1,0 +1,14 @@
+extract obj_props
+
+objects = level.get_objects(GROUPS, g => 998g in g)
+botleft = objects.filter(OBJ_ID, i => i is ==1603)[0]
+
+let chartstring = ""
+
+for object in objects:
+	if object is ==botleft { continue }
+	dk = "don" if object[Y] is !=botleft[Y] else "ka"
+	dx = (object[X] - botleft[X]) / 30
+	chartstring += (dx as @string) + " " + dk + "\n"
+
+$.writefile("chart.txt", chartstring)
