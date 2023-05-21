@@ -7,13 +7,13 @@ _(literally an idea i had when i was falling asleep in class)_
 - [X] Documentation
 - - [X] UI/UX docs
 - - [X] Technical docs
-- [ ] Song link page
 - [ ] Song information transition
 - [ ] Gameplay
 - - [ ] UI
 - - [ ] Make it work
 - - [ ] Actual chart
 - [ ] Results screen
+- [ ] Endscreen
 
 # LEGAL NOTE
 _In light of all web-based Taiko simulators being taken down due to a copyright claim, I thought I'd mention this._  

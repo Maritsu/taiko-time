@@ -6,16 +6,15 @@ let M = {
 M.groups.alpha = 1g
 M.groups.semialpha = 2g
 M.groups.overlay = 3g
+M.groups.allui = 999g
 
-M.groups.SL = ?g
 M.groups.SI = ?g
 M.groups.GP = ?g
 M.groups.RS = ?g
 M.groups.ES = ?g
 M.groups.ED = ?g
 
-M.offsets.SL = 5
-M.offsets.SI = 795
+M.offsets.SI = 5
 M.offsets.GP = 1185
 M.offsets.RS = 1455
 M.offsets.ES = 17985

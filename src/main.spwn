@@ -1,6 +1,5 @@
 // Modules
 SE = import "setup.spwn"
-SL = import "songlink.spwn"
 SI = import "songinfo.spwn"
 CH = import "chart.spwn"
 GP = import "gameplay.spwn"
@@ -15,8 +14,6 @@ $.add(alpha_trigger(SE.groups.alpha,0).with(obj_props.X, -10))
 $.add(alpha_trigger(SE.groups.semialpha,0.5).with(obj_props.X, -10))
 
 // Move layouts to switch modes
-$.add(toggle_off_trigger(SE.groups.SL).with(obj_props.X, SE.offsets.SI).with(obj_props.Y, -75))
-$.add(toggle_on_trigger(SE.groups.SI).with(obj_props.X, SE.offsets.SI).with(obj_props.Y, -85))
 $.add(toggle_off_trigger(SE.groups.SI).with(obj_props.X, SE.offsets.GP).with(obj_props.Y, -75))
 $.add(toggle_on_trigger(SE.groups.GP).with(obj_props.X, SE.offsets.GP).with(obj_props.Y, -85))
 $.add(toggle_off_trigger(SE.groups.GP).with(obj_props.X, SE.offsets.RS).with(obj_props.Y, -75))
