@@ -7,9 +7,6 @@ _group = ?g
 M.constructChart = (sx:@number, sy:@number) {
 	extract obj_props
 
-	let sx = sx*30
-	let sy = sy*30
-
 	start = obj {
 		OBJ_ID: 1603,
 		X: sx,

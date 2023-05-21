@@ -1,0 +1,9 @@
+let M = {}
+
+SE = import "setup.spwn"
+
+M.spwntext = !{
+	SE.groups.spwn.move(-80, 0, 0.5, easing = ELASTIC_OUT)
+}
+
+return M

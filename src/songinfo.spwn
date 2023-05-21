@@ -1,8 +1,12 @@
 let M = {}
 
-M.group = 2001g
-M.create = () {
-	
+SE = import "setup.spwn"
+
+M.movein = !{
+	9g.move(0, -70, 0.5, easing = ELASTIC_OUT)
+}
+M.moveout = !{
+	9g.move(0, 70, 0.5, easing = ELASTIC_OUT)
 }
 
 return M

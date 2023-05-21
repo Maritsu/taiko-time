@@ -7,16 +7,18 @@ M.groups.alpha = 1g
 M.groups.semialpha = 2g
 M.groups.overlay = 3g
 M.groups.allui = 999g
+M.groups.spwn = 11g
 
-M.groups.SI = ?g
+M.groups.SI = 10g
 M.groups.GP = ?g
 M.groups.RS = ?g
 M.groups.ES = ?g
 M.groups.ED = ?g
 
 M.offsets.SI = 5
-M.offsets.GP = 1185
-M.offsets.RS = 1455
+M.offsets.GP = 795
+M.offsets.CH = 1455
+M.offsets.RS = 16515
 M.offsets.ES = 17985
 M.offsets.ED = 19485
 

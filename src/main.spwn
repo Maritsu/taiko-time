@@ -24,9 +24,11 @@ $.add(toggle_off_trigger(SE.groups.ES).with(obj_props.X, SE.offsets.ED).with(obj
 $.add(toggle_on_trigger(SE.groups.ED).with(obj_props.X, SE.offsets.ED).with(obj_props.Y, -85))
 
 // Level setup, chart, move everything into place
-BG.set(@chroma::from_rgb8(230,121,1))
-CH.constructChart(40, 2)
-
-// Move overlay
-SE.groups.overlay.move(-300, 0, 0)
 SE.groups.overlay.lock_to_player(lock_x = true, lock_y = false)
+SE.groups.overlay.move(-300, 0, 0)
+SE.groups.allui.move(0, -150, 0)
+-> BG.set(@chroma::from_rgb8(230,121,1))
+CH.constructChart(SE.offsets.CH, 4.5*30)
+
+SI.movein!
+SI.moveout!
