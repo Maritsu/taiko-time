@@ -3,7 +3,7 @@ The section details are explained in the other files in this folder.
 
 ```mermaid
 flowchart TD
-    0[Begin level] -->SI
+    0[Begin level]
     0 -->|A few seconds pass| SI(Song info transition)
     SI -->|A few seconds pass| GP(Gameplay)
     GP -->|Song ends| RS(Results screen: good/bad/miss, accuracy, combo, grade)
