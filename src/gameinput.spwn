@@ -1,0 +1,58 @@
+let M = {
+	ids: {don:{}, ka:{}},
+	trackers: {don:{}, ka:{}},
+	counters: {},
+}
+
+CH = import "chart.spwn"
+
+M.ids.bar = 3b
+M.ids.clearbar = 4b
+M.ids.stopbar = 5b
+
+M.ids.don.great = 5b
+M.ids.don.good = 6b
+M.ids.don.miss = 7b
+M.ids.ka.great = 8b
+M.ids.ka.good = 9b
+M.ids.ka.miss = 10b
+
+M.trackers.don.great = counter(M.ids.don.great.create_tracker_item(CH.ids.don))
+M.trackers.don.good = counter(M.ids.don.good.create_tracker_item(CH.ids.don))
+M.trackers.don.miss = counter(M.ids.don.miss.create_tracker_item(CH.ids.don))
+
+M.trackers.ka.great = counter(M.ids.ka.great.create_tracker_item(CH.ids.ka))
+M.trackers.ka.good = counter(M.ids.ka.good.create_tracker_item(CH.ids.ka))
+M.trackers.ka.miss = counter(M.ids.ka.miss.create_tracker_item(CH.ids.ka))
+
+M.trackers.don.cross = counter(M.ids.don.great.create_tracker_item(CH.ids.ka))
+M.trackers.ka.cross = counter(M.ids.ka.great.create_tracker_item(CH.ids.don))
+
+M.counters.great = counter(3i)
+M.counters.good = counter(4i)
+M.counters.miss = counter(5i)
+M.counters.total = counter(6i)
+M.counters.max = counter(7i)
+M.counters.combo = counter(1i)
+M.counters.maxcombo = counter(2i)
+
+M.input_don = !{
+	if M.trackers.don.great == 1 {
+		M.counters.great += 1
+		M.counters.total += 3
+		M.counters.combo += 1
+		if M.counters.combo > M.counters.maxcombo {M.counters.maxcombo = M.counters.combo}
+	}
+	else if M.trackers.don.good == 1 {
+		M.counters.good += 1
+		M.counters.total += 2
+		M.counters.combo += 1
+		if M.counters.combo > M.counters.maxcombo {M.counters.maxcombo = M.counters.combo}
+	}
+	else if M.trackers.don.miss == 1 {
+		M.counters.miss += 1
+		M.counters.combo = 0
+	}
+}
+
+return M
