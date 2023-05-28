@@ -3,7 +3,7 @@ let M = {}
 SE = import "setup.spwn"
 
 M.movein = !{
-	9g.move(0, -70, 0.5, easing = ELASTIC_OUT)
+	-> 9g.move(0, -70, 0.5, easing = ELASTIC_OUT)
 }
 M.moveout = !{
 	-> 9g.move(0, 70, 0.5, easing = ELASTIC_OUT)
