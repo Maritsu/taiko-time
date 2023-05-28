@@ -22,4 +22,20 @@ M.offsets.RS = 16515
 M.offsets.ES = 17985
 M.offsets.ED = 19485
 
+M.setup_toggle_layout = () {
+	$.add(toggle_off_trigger(M.groups.GP).with(obj_props.X, 0).with(obj_props.Y, -95))
+	$.add(toggle_off_trigger(M.groups.RS).with(obj_props.X, 0).with(obj_props.Y, -105))
+	$.add(toggle_off_trigger(M.groups.ES).with(obj_props.X, 0).with(obj_props.Y, -115))
+	$.add(toggle_off_trigger(M.groups.ED).with(obj_props.X, 0).with(obj_props.Y, -125))
+
+	$.add(toggle_off_trigger(M.groups.SI).with(obj_props.X, M.offsets.GP).with(obj_props.Y, -75))
+	$.add(toggle_on_trigger(M.groups.GP).with(obj_props.X, M.offsets.GP).with(obj_props.Y, -85))
+	$.add(toggle_off_trigger(M.groups.GP).with(obj_props.X, M.offsets.RS).with(obj_props.Y, -75))
+	$.add(toggle_on_trigger(M.groups.RS).with(obj_props.X, M.offsets.RS).with(obj_props.Y, -85))
+	$.add(toggle_off_trigger(M.groups.RS).with(obj_props.X, M.offsets.ES).with(obj_props.Y, -75))
+	$.add(toggle_on_trigger(M.groups.ES).with(obj_props.X, M.offsets.ES).with(obj_props.Y, -85))
+	$.add(toggle_off_trigger(M.groups.ES).with(obj_props.X, M.offsets.ED).with(obj_props.Y, -75))
+	$.add(toggle_on_trigger(M.groups.ED).with(obj_props.X, M.offsets.ED).with(obj_props.Y, -85))
+}
+
 return M

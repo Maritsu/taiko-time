@@ -12,23 +12,20 @@ GS = import gamescene
 // Triggers
 $.add(alpha_trigger(SE.groups.alpha,0).with(obj_props.X, -10))
 $.add(alpha_trigger(SE.groups.semialpha,0.5).with(obj_props.X, -10))
+$.add(toggle_off_trigger(14g).with(obj_props.X, -10).with(obj_props.HIGH_DETAIL, true))
 
 // Move layouts to switch modes
-$.add(toggle_off_trigger(SE.groups.SI).with(obj_props.X, SE.offsets.GP).with(obj_props.Y, -75))
-$.add(toggle_on_trigger(SE.groups.GP).with(obj_props.X, SE.offsets.GP).with(obj_props.Y, -85))
-$.add(toggle_off_trigger(SE.groups.GP).with(obj_props.X, SE.offsets.RS).with(obj_props.Y, -75))
-$.add(toggle_on_trigger(SE.groups.RS).with(obj_props.X, SE.offsets.RS).with(obj_props.Y, -85))
-$.add(toggle_off_trigger(SE.groups.RS).with(obj_props.X, SE.offsets.ES).with(obj_props.Y, -75))
-$.add(toggle_on_trigger(SE.groups.ES).with(obj_props.X, SE.offsets.ES).with(obj_props.Y, -85))
-$.add(toggle_off_trigger(SE.groups.ES).with(obj_props.X, SE.offsets.ED).with(obj_props.Y, -75))
-$.add(toggle_on_trigger(SE.groups.ED).with(obj_props.X, SE.offsets.ED).with(obj_props.Y, -85))
+SE.setup_toggle_layout()
+GP.setup_triggers()
 
 // Level setup, chart, move everything into place
 SE.groups.overlay.lock_to_player(lock_x = true, lock_y = false)
+SE.groups.allui.lock_to_player(lock_x = true, lock_y = false)
 SE.groups.overlay.move(-300, 0, 0)
+SE.groups.allui.move(-300, 0, 0)
 SE.groups.allui.move(0, -150, 0)
 -> BG.set(@chroma::from_rgb8(230,121,1))
-CH.constructChart(SE.offsets.CH, 4.5*30)
+// CH.constructChart(SE.offsets.CH, 4.5*30)
 
 SI.movein!
 SI.moveout!
