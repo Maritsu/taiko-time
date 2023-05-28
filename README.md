@@ -7,7 +7,7 @@ _(literally an idea i had when i was falling asleep in class)_
 - [X] Documentation
 - - [X] UI/UX docs
 - - [X] Technical docs
-- [ ] Song information transition
+- [X] Song information transition
 - [ ] Gameplay
 - - [ ] UI
 - - [ ] Make it work
