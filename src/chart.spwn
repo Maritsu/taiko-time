@@ -1,7 +1,9 @@
-let M = {}
+let M = {
+	ids: {},
+}
 
-_donid = ?b
-_kaid = ?b
+M.ids.don = ?b
+M.ids.ka = ?b
 _group = ?g
 
 M.constructChart = (sx:@number, sy:@number) {
@@ -19,14 +21,14 @@ M.constructChart = (sx:@number, sy:@number) {
 
 	for line in file {
 		data = line.trim().split(" ")
-		[xo, dk] = data if data.length == 2 else [-30, _kaid]
+		[xo, dk] = data if data.length == 2 else [-30, M.ids.ka]
 
 		let object = obj {
 			OBJ_ID: 1816,
 			X: sx + 30*@number(xo),
 			Y: sy,
 			SCALING: 1,
-			BLOCK_A: _donid if dk == "don" else _kaid,
+			BLOCK_A: M.ids.don if dk == "don" else M.ids.ka,
 			DYNAMIC_BLOCK: true,
 			GROUPS: _group,
 		}
