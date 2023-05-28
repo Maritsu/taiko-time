@@ -1,0 +1,23 @@
+let M = {
+	ids: {},
+}
+
+IN = import "gameinput.spwn"
+CH = import "chart.spwn"
+SE = import "setup.spwn"
+
+M.setup_triggers = () {
+	$.add(toggle_off_trigger(14g).with(obj_props.X, -10).with(obj_props.HIGH_DETAIL, true))
+	$.add(alpha_trigger(21g, 0).with(obj_props.X, SE.offsets.GP-15).with(obj_props.Y, -130))
+	$.add(alpha_trigger(22g, 0).with(obj_props.X, SE.offsets.GP-15).with(obj_props.Y, -140))
+	$.add(toggle_off_trigger(23g).with(obj_props.X, SE.offsets.GP-15).with(obj_props.Y, -150))
+	$.add(toggle_off_trigger(24g).with(obj_props.X, SE.offsets.GP-15).with(obj_props.Y, -160))
+	$.add(toggle_off_trigger(25g).with(obj_props.X, SE.offsets.GP-15).with(obj_props.Y, -170))
+}
+
+M.movein = !{
+	-> 27g.move(0, 70, 1, easing = ELASTIC_OUT)
+	-> 28g.move(-150, 0, 1, easing = ELASTIC_OUT)
+}
+
+return M

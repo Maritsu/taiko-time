@@ -30,3 +30,5 @@ SE.groups.allui.move(0, -150, 0)
 SI.movein!
 call_on_x_position(20*30, SI.moveout)
 call_on_x_position(22*30, SI.monstersinc)
+
+call_on_x_position(SE.offsets.GP, GP.movein)

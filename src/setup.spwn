@@ -10,7 +10,7 @@ M.groups.allui = 999g
 M.groups.spwn = 11g
 
 M.groups.SI = 10g
-M.groups.GP = ?g
+M.groups.GP = 20g
 M.groups.RS = ?g
 M.groups.ES = ?g
 M.groups.ED = ?g
