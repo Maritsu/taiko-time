@@ -28,4 +28,5 @@ SE.groups.allui.move(0, -150, 0)
 // CH.constructChart(SE.offsets.CH, 4.5*30)
 
 SI.movein!
-SI.moveout!
+call_on_x_position(20*30, SI.moveout)
+call_on_x_position(22*30, SI.monstersinc)

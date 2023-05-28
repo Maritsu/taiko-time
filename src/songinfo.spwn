@@ -6,7 +6,11 @@ M.movein = !{
 	9g.move(0, -70, 0.5, easing = ELASTIC_OUT)
 }
 M.moveout = !{
-	9g.move(0, 70, 0.5, easing = ELASTIC_OUT)
+	-> 9g.move(0, 70, 0.5, easing = ELASTIC_OUT)
+}
+M.monstersinc = !{
+	-> 12g.move(-50, 30, 0.5)
+	-> 13g.move(0, -30, 0.5)
 }
 
 return M
