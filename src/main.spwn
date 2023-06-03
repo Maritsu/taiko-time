@@ -34,9 +34,9 @@ call_on_x_position(22*30, SI.monstersinc)
 call_on_x_position(SE.offsets.GP, GP.movein)
 on(GS.button_a(), !{
 	-> GP.showbutton("don")
-	GP.IN.input_don!
+	-> GP.IN.input_don()
 })
 on(GS.button_b(), !{
 	-> GP.showbutton("ka")
-	GP.IN.input_ka!
+	-> GP.IN.input_ka()
 })

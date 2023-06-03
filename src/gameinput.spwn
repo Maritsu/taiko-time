@@ -66,7 +66,7 @@ check_ka = () { return (M.trackers.ka.miss >= 1 || M.trackers.ka.good >= 1) }
  *   - then check cross [todo: add this later]
  * - check miss click
  */
-M.input_don = !{
+M.input_don = () {
 	if (M.trackers.don.late >= 1 && check_don()) {
 		if (M.trackers.ka.miss >= 1) { register("miss_late") }
 		else /* good */ { register("good_late") }
@@ -78,7 +78,7 @@ M.input_don = !{
 	} else { /* drop input */ }
 }
 
-M.input_ka = !{
+M.input_ka = () {
 	if (M.trackers.don.late >= 1 && check_ka()) {
 		if (M.trackers.ka.miss >= 1) { register("miss_late") }
 		else /* good */ { register("good_late") }
