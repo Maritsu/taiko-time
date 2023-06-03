@@ -57,8 +57,7 @@ register = (judge:@string) {
 	if (!("miss" in judge)) {update_combo()}
 }
 
-check_don = () { return (M.trackers.don.miss >= 1 || M.trackers.don.good >= 1) }
-check_ka = () { return (M.trackers.ka.miss >= 1 || M.trackers.ka.good >= 1) }
+check_coll = (note:@string) { return (M.trackers[note].miss >= 1 || M.trackers[note].good >= 1) }
 
 /* PLAN:
  * - check non-miss left-to-right: /notelock lol/
@@ -66,26 +65,15 @@ check_ka = () { return (M.trackers.ka.miss >= 1 || M.trackers.ka.good >= 1) }
  *   - then check cross [todo: add this later]
  * - check miss click
  */
-M.input_don = () {
-	if (M.trackers.don.late >= 1 && check_don()) {
-		if (M.trackers.ka.miss >= 1) { register("miss_late") }
+M.input = (note:@string) {
+	anote = "ka" if (note=="don") else "don"
+	if (M.trackers[note].late >= 1 && check_coll(note)) {
+		if (M.trackers[anote].miss >= 1) { register("miss_late") }
 		else /* good */ { register("good_late") }
-	} else if (M.trackers.don.great >= 1) {
+	} else if (M.trackers[note].great >= 1) {
 		register("great")
-	} else if (M.trackers.don.early >= 1 && check_don()) {
-		if (M.trackers.ka.miss >= 1) { register("miss_early") }
-		else /* good */ { register("good_early") }
-	} else { /* drop input */ }
-}
-
-M.input_ka = () {
-	if (M.trackers.don.late >= 1 && check_ka()) {
-		if (M.trackers.ka.miss >= 1) { register("miss_late") }
-		else /* good */ { register("good_late") }
-	} else if (M.trackers.ka.great >= 1) {
-		register("great")
-	} else if (M.trackers.don.early >= 1 && check_ka()) {
-		if (M.trackers.ka.miss >= 1) { register("miss_early") }
+	} else if (M.trackers[note].early >= 1 && check_coll(note)) {
+		if (M.trackers[anote].miss >= 1) { register("miss_early") }
 		else /* good */ { register("good_early") }
 	} else { /* drop input */ }
 }
