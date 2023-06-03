@@ -2,7 +2,7 @@ let M = {
 	ids: {},
 }
 
-IN = import "gameinput.spwn"
+M.IN = import "gameinput.spwn"
 CH = import "chart.spwn"
 SE = import "setup.spwn"
 
